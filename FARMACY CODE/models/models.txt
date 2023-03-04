@@ -1,0 +1,3 @@
+EfficientNetV2S
+RestNet50
+VGG16
