@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<style>
+    .carousel-item {
+        height: calc(100vh - 56px);
+        min-height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .carousel-caption {
+        bottom: 50%;
+        transform: translateY(50%);
+        text-align: center;
+    }
+    .carousel-caption h2 {
+        font-size: 3rem;
+    }
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
+    @media (max-width: 768px) {
+        .carousel-caption {
+            bottom: 3rem;
+            transform: translateY(0);
+        }
+        .carousel-caption h2 {
+            font-size: 2rem;
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+{% endblock head %}
+
+{% block content %}
+<div class="row p-0 m-0">
+    <div class="col-12 p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('{{url_for('static', filename='images/sliders/Header.jpg')}}');opacity: 0.9;">
+                    <div class="carousel-caption text-light">
+                        <br><br><br><br>
+                        <h2 style = "text-shadow: 2px 1px #097969">Farmacy</h2>
+                        <p>Protect Your Crops, Harvest Your Potential: Detect Plant Diseases</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

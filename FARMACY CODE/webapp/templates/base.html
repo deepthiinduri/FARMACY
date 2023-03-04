@@ -1,0 +1,144 @@
+<!doctype html>
+  
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <link rel="icon" href="{{ url_for('static', filename='images/sliders/Farmacy-logo.png') }}" type="image/x-icon">
+
+
+        <script src="https://kit.fontawesome.com/de6146db41.js" crossorigin="anonymous"></script>
+        <title>{% block title %}{% endblock title %}FARMACY</title>
+
+        <link rel="apple-touch-icon-precomposed" href="{{url_for('static', filename='img/logo.svg')}}" type="image/svg+xml">
+        {% block head %}{% endblock head %}
+
+        <style>
+            li:hover {
+                background-color: black;
+                border-radius: 5px;
+                color: black;
+            }
+
+            li {
+                padding: 5px 10px;
+                margin: 0 10px;
+                transition: all 0.3s ease;
+                text-shadow: 0.2px 0.1px green;
+            }
+
+            .precautions {
+                margin: 40px;
+            }
+
+            .precautions li:hover{
+                
+                background-color:#D0D0D0;
+                transition: all 0.5s ease;
+            }
+
+            .serv-section {
+                display: flex;
+                justify-content: center;
+              }
+
+            .serv-content {
+                width: 60%;
+                background: #E8E8E8;
+                text-align: center;
+                border-radius: 0.375rem;
+                padding: 3.125rem 1.563rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                
+            }
+            
+            .serv-content:hover {
+                background: #D3D3D3;
+            }
+            
+
+            /* Media queries for smaller screens */
+            @media (max-width: 576px) {
+                .navbar-nav {
+                    font-size: 14px;
+                }
+
+                .nav-link {
+                    padding: 0.5rem 0;
+                }
+            }
+
+            /* Media queries for medium screens */
+            @media (min-width: 576px) and (max-width: 768px) {
+                .navbar-nav {
+                    font-size: 16px;
+                }
+
+                .nav-link {
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            /* Media queries for large screens */
+            @media (min-width: 768px) {
+                .navbar-nav {
+                    font-size: 20px;
+                }
+
+                .nav-link {
+                    padding: 0.5rem 1.5rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <!-- NAVBAR BEGINS -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/" style = "padding: 5px 10px;margin: 0 10px;font-size: 32px;letter-spacing: 2px;text-shadow: 2px 1px #097969;font-weight:600">FARMACY</a>
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto" style = "font-size : 20px;">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/plantdisease">Plant Disease Detection</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- NAVBAR ENDS -->
+            {% block content %}{% endblock content %}
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous">
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,69 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="row-sm p-sm-3">
+    <div>
+        <p class="text-center">
+            <h3 class="text-center" style="font-size: 2em;text-shadow: 1.5px 1px #AFE1AF">
+                Plant Disease Detection
+            </h3>
+            <p class="text-center" style="font-size: 1.1em;">
+                Identify plant diseases in seconds: simply upload an image of your plant!
+            </p><br>
+        </p>
+        <div class="serv-section">
+            <div class="serv-content">
+                <p>
+                    <h4 class="text-center">
+                        Upload Image file
+                    </h4>
+                    <br>
+                </p>
+                <div class="d-flex justify-content-center">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" name="file" id="file-input" class="custom-file-input" style="cursor: pointer;">
+                                <label class="custom-file-label" for="file-input" style="display: flex; align-items: center;">Drag &amp; Drop image</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-dark">Upload</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="text-center" id="image-preview"></div>
+                <script>
+                    const fileInput = document.getElementById("file-input");
+                    const fileLabel = document.querySelector(".custom-file-label");
+                    const imagePreview = document.getElementById("image-preview");
+                  
+                    fileInput.addEventListener("change", function() {
+                      const file = this.files[0];
+                      if (file) {
+                        const reader = new FileReader();
+                        reader.addEventListener("load", function() {
+                          imagePreview.innerHTML = `<img src="${this.result}" style="max-width: 400px; max-height: 400px;" />`;
+                        });
+                        reader.readAsDataURL(file);
+                  
+                        // Update file label with name of uploaded file
+                        if (file.name.length > 25) {
+                          const ext = file.name.slice(file.name.lastIndexOf("."));
+                          const truncatedName = file.name.slice(0, 12) + "..." + ext;
+                          fileLabel.innerHTML = truncatedName;
+                        } else {
+                          fileLabel.innerHTML = file.name;
+                        }
+                      }
+                    });
+                  </script>
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
