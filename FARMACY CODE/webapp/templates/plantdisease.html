@@ -23,47 +23,26 @@
                 <div class="d-flex justify-content-center">
                     <form method="post" enctype="multipart/form-data">
                         <div class="input-group mb-3">
-                            <div class="custom-file">
-                                <input type="file" name="file" id="file-input" class="custom-file-input" style="cursor: pointer;">
-                                <label class="custom-file-label" for="file-input" style="display: flex; align-items: center;">Drag &amp; Drop image</label>
-                            </div>
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-dark">Upload</button>
-                            </div>
+                            <input type="file" name="file" multiple class="form-control" id="inputGroupFile">
+                            <label class="input-group-text" for="inputGroupFile">Choose file(s)</label>
                         </div>
+                        <button type="submit" class="btn btn-dark" onclick="showLoading()">Upload</button>
                     </form>
                 </div>
-                <br>
-                <div class="text-center" id="image-preview"></div>
-                <script>
-                    const fileInput = document.getElementById("file-input");
-                    const fileLabel = document.querySelector(".custom-file-label");
-                    const imagePreview = document.getElementById("image-preview");
-                  
-                    fileInput.addEventListener("change", function() {
-                      const file = this.files[0];
-                      if (file) {
-                        const reader = new FileReader();
-                        reader.addEventListener("load", function() {
-                          imagePreview.innerHTML = `<img src="${this.result}" style="max-width: 400px; max-height: 400px;" />`;
-                        });
-                        reader.readAsDataURL(file);
-                  
-                        // Update file label with name of uploaded file
-                        if (file.name.length > 25) {
-                          const ext = file.name.slice(file.name.lastIndexOf("."));
-                          const truncatedName = file.name.slice(0, 12) + "..." + ext;
-                          fileLabel.innerHTML = truncatedName;
-                        } else {
-                          fileLabel.innerHTML = file.name;
-                        }
-                      }
-                    });
-                  </script>
+                
+                <div id="loading" style="display: none; background-color: transparent; position: fixed; top: 0; left: 0; height: 100%; width: 100%;">
+                    <img src="static/images/predicting_gif.gif" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%);">
+                </div>
                   
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function showLoading() {
+        document.getElementById("loading").style.display = "block";
+    }
+</script>
 
 {% endblock content %}
