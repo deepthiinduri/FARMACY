@@ -1,0 +1,438 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="row-sm p-sm-3">
+    <div>
+        <p class="text-center">
+            <h3 class="text-center" style="font-size: 2em;text-shadow: 1.5px 1px #AFE1AF">
+                {{ disease_name }}
+            </h3>
+            <br>
+        </p>
+        <div class="serv-section">
+            <div class="serv-content">
+                <div class="d-flex justify-content-center">
+                    <img src="{{img_url}}" style="max-width: 100%; height: auto;">
+                </div>
+                <br>
+                <p class="text-center" style="font-size: 1.1em;">
+                    <h3></h3>
+                    
+                    {% if "healthy" in disease_name %}
+                        <span style="background-color: lime; padding: 5px; font-size: 18px;">
+                    {% else %}
+                        <span style="background-color: orangered; padding: 5px; font-size: 18px;">
+                    {% endif %}
+                    {{ disease_name }}</span>
+
+                </p>
+                
+                {% if disease_name == 'Apple healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Apple plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Blueberry healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Blueberry plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Cherry (including sour) healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Cherry plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Corn(maize) healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Corn plant leaf is healthy.</p>
+                {% endif %}
+        
+                {% if disease_name == 'Grape healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Grape plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Peach healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Peach plant leaf is healthy.</p>
+                {% endif %}
+
+
+                {% if disease_name == 'Pepper bell healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Pepper bell plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Potato healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Potato plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Raspberry healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Raspberry plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Soybean healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Soybean plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Strawberry healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Strawberry plant leaf is healthy.</p>
+                {% endif %}
+
+                {% if disease_name == 'Tomato healthy' %}
+                    <br>
+                    <p style = "text-align: center; font-size:20px">The Tomato plant leaf is healthy.</p>
+                {% endif %}
+
+
+            </div>
+
+            {% if disease_name == 'Apple scab' %}
+                
+                <ul class="precautions">
+                    <li>Apple scab is a common disease of apple trees, caused by the fungus Venturia inaequalis. It affects both leaves and fruit of the tree causing dark, scabby lesions on the leaves, fruit, and twigs.</li> 
+                    <li>The disease can reduce the tree's overall health, yield, and fruit quality.</li>
+                    <li>Remove any infected leaves and debris from the orchard floor and burn or dispose of them</li>
+                    <li>Prune apple trees to increase air circulation and sunlight penetration, which can reduce disease incidence</li>
+                    <li>Apply fungicides to protect new growth during the spring when conditions are favorable for infection</li>
+                    <li>Avoid overhead irrigation and watering late in the day, which can create a humid environment that favors the disease</li>
+                    <li>Use a dormant oil spray during the winter to help control overwintering fungal spores.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Apple Black rot' %}
+                
+                <ul class="precautions">
+                    <li>Apple black rot is a fungal disease that affects apple trees, caused by the fungus Botryosphaeria obtusa</li>
+                    <li>Symptoms of Apple black rot include circular, sunken lesions on fruit, blackening of the calyx end of the fruit, and black, spore-filled cankers on branches and twigs.</li>
+                    <li>The disease can cause significant damage to apple crops and reduce the tree's overall health and productivity.</li>
+                    <li>To prevent Apple black rot, it is important to maintain good orchard sanitation, which includes removing and destroying any infected fruit or plant material.</li>
+                    <li>Pruning apple trees to increase air circulation and sunlight penetration can also help reduce disease incidence.</li>
+                    <li>Fungicide applications during the growing season can be effective in managing Apple black rot, particularly during periods of high humidity or rainfall.</li>                    
+                    <li>Cultural practices such as avoiding overhead irrigation and removing mummified fruit from the tree can also help reduce disease pressure.</li>
+                    <li>Monitoring the orchard for early signs of the disease and taking prompt action can help limit the spread of the disease and minimize its impact on the crop.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Apple Cedar apple rust' %}
+                
+                <ul class="precautions">
+                    <li>Apple cedar apple rust is a fungal disease that affects apple trees, caused by the fungus Gymnosporangium juniperi-virginianae.</li>
+                    <li>The disease causes yellow spots on leaves, and bright orange, gelatinous spore horns on the undersides of leaves in the late spring to early summer.</li>
+                    <li>To prevent apple cedar apple rust, plant apple varieties that are resistant to the disease.</li>
+                    <li>Remove any juniper plants within a 1/4 mile radius of the apple orchard, as junipers are an alternate host for the fungus that causes the disease.</li>
+                    <li>Prune apple trees to increase air circulation and sunlight penetration, which can reduce disease incidence.</li>
+                    <li>Apply fungicides during the growing season to protect new growth from infection.</li>
+                </ul>
+            {% endif %}
+
+
+            {% if disease_name == 'Cherry (including sour) Powdery mildew' %}
+                
+                <ul class = "precautions">
+                    <li>Cherry powdery mildew is a fungal disease that affects cherry trees and can be caused by several different fungi in the Erysiphaceae family.</li>
+                    <li>Symptoms of Cherry powdery mildew include white or grayish-white powdery growth on the leaves, shoots, flowers, and fruit of the tree.</li>
+                    <li>Cherry powdery mildew can cause defoliation, reduced tree vigor, and decreased fruit yield and quality.</li>
+                    <li>To manage Cherry powdery mildew, remove and destroy infected plant parts and avoid overhead irrigation, which can create a humid environment that favors the disease.</li>
+                    <li>Plant cherry trees in areas with good air circulation and sunlight penetration to reduce disease incidence.</li>
+                    <li>Fungicide applications during the growing season can be effective in managing Cherry powdery mildew, particularly during periods of high humidity or rainfall.</li>
+                    <li>Monitor the orchard for early signs of the disease and take prompt action to limit the spread of the disease and minimize its impact on the crop.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Corn (maize) Cercospora leaf spot Gray leaf spot' %}
+                
+                <ul class = "precautions">
+                    <li>Cercospora leaf spot (CLS) and Gray leaf spot (GLS) are fungal diseases that affect corn (maize) plants.</li>
+                    <li>Symptoms of CLS include small, tan to brown lesions on the leaves that can merge to form larger spots with yellow halos.</li>
+                    <li>Symptoms of GLS include rectangular, tan to brown lesions on the leaves that have a distinct yellow border.</li>
+                    <li>Cercospora leaf spot and Gray leaf spot can cause defoliation, reduced plant vigor, and decreased yield and quality of corn.</li>
+                    <li>To manage these diseases, rotate crops, practice good field sanitation, and remove and destroy crop debris after harvest.</li>
+                    <li>Fungicide applications during the growing season can be effective in managing CLS and GLS, particularly when used in conjunction with cultural practices.</li>
+                    <li>Plant corn hybrids with resistance to CLS and GLS, when available.</li>
+                    <li>Monitor the crop for early signs of the disease and take prompt action to limit the spread of the disease and minimize its impact on the crop.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Corn(maize) Common rust' %}
+                
+                <ul class = "precautions">
+                    <li>Common rust is a fungal disease that affects corn (maize) plants, caused by the fungus Puccinia sorghi.</li>
+                    <li>Symptoms of common rust include small, circular to elongated, reddish-brown pustules on the leaves, husks, and stalks of the plant.</li>
+                    <li>As the disease progresses, the pustules turn dark brown and can cause premature leaf drop.</li>
+                    <li>Common rust can cause reduced plant growth, reduced yield, and decreased grain quality.</li>
+                    <li>To manage common rust, rotate crops and use resistant corn hybrids when available.</li>
+                    <li>Fungicide applications during the growing season can be effective in managing common rust, particularly when used in conjunction with cultural practices such as timely planting, weed control, and appropriate fertilizer management.</li>
+                    <li>However, fungicide applications should be based on a thorough assessment of the disease severity and other factors that may affect the efficacy of the fungicide. </li>
+                    <li>It is important to monitor the field regularly and take action as soon as symptoms appear. In severe cases, early harvesting or destruction of infected plants may be necessary to prevent the spread of the disease to healthy plants.</li>
+                <ul>
+            {% endif %}   
+            
+            {% if disease_name == 'Corn(maize) Northern Leaf Blight' %}
+                
+                <ul class="precautions">
+                    <li>Corn Northern Leaf Blight is a fungal disease caused by the fungus Exserohilum turcicum.</li>
+                    <li>The symptoms of Northern Leaf Blight include cigar-shaped lesions on leaves that may have a gray-green or tan center and brown or purple borders.</li>
+                    <li>The disease can reduce yield and quality of corn.</li>
+                    <li>Plant resistant corn varieties when possible.</li>
+                    <li>Use crop rotation to prevent the buildup of the fungus in the soil.</li>
+                    <li>Remove and destroy any infected plant debris, including tassels and leaves, after harvest.</li>
+                    <li>Fungicides can be used to control Northern Leaf Blight, but they are usually not needed in small-scale corn production.</li>
+                </ul>
+            {% endif %}
+    
+            {% if disease_name == 'Grape Black rot' %}
+                
+                <ul class="precautions">
+                    <li>Grape black rot is a fungal disease caused by the fungus Guignardia bidwellii.</li>
+                    <li>The symptoms of black rot include circular, brown lesions on the fruit that may enlarge and become covered with black spores.</li>
+                    <li>The disease can cause significant damage to grape crops.</li>
+                    <li>Prune the vines to improve air circulation and sunlight penetration, which can help reduce disease incidence.</li>
+                    <li>Remove and destroy any infected plant debris, including leaves, canes, and fruit, after harvest.</li>
+                    <li>Fungicides can be used to control black rot, but they are usually not needed in small-scale grape production.</li>
+                </ul>
+
+                
+            {% endif %}
+    
+            {% if disease_name == 'Grape Esca(Black Measles)' %}
+                
+                <ul class = "precautions">
+                    <li>Grape Esca, also known as Black Measles, is a fungal disease that affects grapevines.</li>
+                    <li>Symptoms of Esca include yellowing and wilting of leaves, as well as black streaking in the wood of the vine.</li>
+                    <li>To manage Esca, it is important to prune grapevines correctly, provide adequate irrigation, and control the population of the insect vectors that spread the disease.</li>
+                    <li>Fungicides can be effective in managing Esca, but their use is limited due to concerns about potential health risks and environmental damage.</li>
+                    <li>Grapevines that are already infected with Esca cannot be cured, so prevention is the key to managing this disease.</li>
+                    <li>Preventive measures include selecting resistant grape varieties, maintaining healthy soil, and avoiding mechanical damage to the vines.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Grape Leaf blight(Isariopsis Leaf Spot)' %}
+                
+                <ul class = "precautions">
+                    <li>Grape Leaf blight, also known as Isariopsis Leaf Spot, is a fungal disease that affects grapevines.</li>
+                    <li>Symptoms of Grape Leaf blight include brown or black spots on the leaves of the vine, which can eventually lead to defoliation.</li>
+                    <li>To manage Grape Leaf blight, it is important to remove and dispose of infected plant material, practice good sanitation in the vineyard, and avoid overhead irrigation.</li>
+                    <li>Fungicides can be effective in managing Grape Leaf blight, particularly when used preventively.</li>
+                    <li>Resistant grape varieties are also available and can be useful in managing this disease.</li>
+                    <li>Regular monitoring and early detection of Grape Leaf blight can help prevent its spread and minimize damage to the vineyard.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Orange Haunglongbing(Citrus greening)' %}
+                
+                <ul class = "precautions">
+                    <li>Orange Haunglongbing, also known as Citrus greening, is a bacterial disease that affects citrus trees.</li>
+                    <li>Symptoms of Citrus greening include yellowing and wilting of leaves, stunted growth, and misshapen fruit.</li>
+                    <li>To manage Citrus greening, it is important to remove and destroy infected trees</li>
+                    <li>Avoid planting young citrus trees near older trees that may be infected</li>
+                    <li>Control the population of insect vectors that spread the disease (such as the Asian citrus psyllid)</li>
+                    <li>Use only certified disease-free planting material</li>
+                    <ul>
+            {% endif %}
+
+            {% if disease_name == 'Peach Bacterial spot' %}
+                
+                <ul class="precautions">
+                    <li>Bacterial spot is a common disease of peaches caused by the bacterium Xanthomonas arboricola pv. pruni.</li>
+                    <li>Symptoms of bacterial spot include water-soaked lesions on the leaves and fruit, which turn brown and eventually become necrotic.</li>
+                    <li>Bacterial spot can cause defoliation, fruit drop, and reduced yield.</li>
+                    <li>To manage bacterial spot, use disease-resistant peach cultivars, practice good sanitation, and avoid overhead irrigation.</li>
+                    <li>Fungicides can be used to control bacterial spot, but are most effective when applied before symptoms appear.</li>
+                    <li>Removing and destroying infected plant parts can help prevent the spread of the disease.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Bell PepperBacterial spot' %}
+                
+                <ul class="precautions">
+                    <li>Bacterial spot is a common disease of bell peppers caused by the bacterium Xanthomonas campestris pv. vesicatoria.</li>
+                    <li>Symptoms of bacterial spot include water-soaked lesions on the leaves, which turn brown and eventually become necrotic.</li>
+                    <li>Bacterial spot can cause defoliation, reduced yield, and poor fruit quality.</li>
+                    <li>To manage bacterial spot, use disease-resistant pepper cultivars, practice good sanitation, and avoid overhead irrigation.</li>
+                    <li>Fungicides can be used to control bacterial spot, but are most effective when applied before symptoms appear.</li>
+                    <li>Removing and destroying infected plant parts can help prevent the spread of the disease.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Potato Early blight' %}
+                
+                <ul class="precautions">
+                    <li>Early blight is a common fungal disease of potatoes caused by the fungus Alternaria solani.</li>
+                    <li>Symptoms of early blight include circular lesions on the leaves that are dark brown and have a target-like appearance.</li>
+                    <li>Early blight can cause defoliation, reduced yield, and reduced tuber quality.</li>
+                    <li>To manage early blight, use disease-resistant potato cultivars, practice good sanitation, and avoid overhead irrigation.</li>
+                    <li>Fungicides can be used to control early blight, but are most effective when applied before symptoms appear.</li>
+                    <li>Crop rotation and removing infected plant debris can help reduce the incidence of early blight.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Potato Late blight' %}
+                
+                <ul class="precautions">
+                    <li>Late blight destructive and highly contagious fungal disease of potatoes caused by the pathogen Phytophthora infestans.</li>
+                    <li>Symptoms of late blight include water-soaked lesions on the leaves, which rapidly expand and turn brown or black.</li>
+                    <li>Late blight can cause defoliation, tuber rot, and complete crop loss.</li>
+                    <li>To manage late blight, use disease-resistant potato cultivars, practice good sanitation, and avoid overhead</li>
+                    <li>Chemical control can also be effective, with fungicides applied preventatively before symptoms appear.</li>
+                    <li>Timely harvest and destruction of infected plant material can help prevent the spread of the disease.</li>
+                    <li>Storage of potato tubers in cool, dry conditions can also help reduce the risk of late blight infection.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Squash Powdery mildew' %}
+                
+                <ul class = "precautions">
+                    <li>Powdery mildew is a fungal disease that affects squash plants, caused by the fungi Podosphaera xanthii and Erysiphe cichoracearum.</li>
+                    <li>Symptoms of powdery mildew include white, powdery spots on the leaves, stems, and fruit of the plant.</li>
+                    <li>As the disease progresses, the spots may turn brown or black, and the leaves may become distorted or yellow and drop prematurely.</li>
+                    <li>To manage powdery mildew, plant resistant varieties of squash and avoid planting in areas with poor air circulation and high humidity.</li>
+                    <li>Fungicides can be used to manage powdery mildew, but it is important to follow label directions and rotate products to prevent resistance.</li>
+                    <li>Cultural practices such as removing infected plant material and maintaining adequate spacing between plants can also help prevent and manage powdery mildew.</li>
+                    <li>Avoid overhead watering, which can create a moist environment that promotes the growth of powdery mildew.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Strawberry Leaf scorch' %}
+                    
+                <ul class = "precautions">
+                    <li>Leaf scorch is a fungal disease that affects strawberries, caused by the fungus Diplocarpon earlianum.</li>
+                    <li>Symptoms of leaf scorch include brown or purplish spots on the leaves, which may become necrotic and develop a scorched appearance.</li>
+                    <li>Leaf scorch can cause reduced plant growth, decreased yield, and decreased fruit quality.</li>
+                    <li>To manage leaf scorch, plant resistant varieties of strawberries and avoid planting in areas with poor air circulation and high humidity.</li>
+                    <li>Fungicides can be used to manage leaf scorch, but it is important to follow label directions and rotate products to prevent resistance.</li>
+                    <li>Cultural practices such as removing infected plant material and maintaining adequate spacing between plants can also help prevent and manage leaf scorch.</li>
+                    <li>Avoid overhead watering, which can create a moist environment that promotes the growth of leaf scorch.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Bacterial spot' %}
+                
+                <ul class = "precautions">
+                    <li>Bacterial spot is a common disease in tomato plants caused by the bacterium Xanthomonas campestris.</li>
+                    <li>It typically appears on leaves, stems, and fruit as small, water-soaked spots that turn brown or black with time and can cause the leaves to become yellow and drop off.</li>
+                    <li>The disease can spread rapidly, especially in warm, humid weather, and can cause significant yield losses.</li>
+                    <li>To manage bacterial spot, use disease-free seed, rotate crops, remove infected plants, and avoid overhead watering.</li>
+                    <li>Fungicides and copper-based bactericides can also be effective in managing bacterial spot, but should be used as a preventative measure rather than a cure.</li>
+                    <li>Sanitation is also important in preventing the spread of bacterial spot, so be sure to clean and disinfect any tools or equipment used on infected plants.</li>
+                    <li>It is best to contact a local agricultural extension office for guidance on the most appropriate treatment methods for bacterial spot in your area.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Early blight' %}
+                
+                <ul class = "precautions">
+                    <li>Early blight is a common fungal disease of tomato plants caused by the fungus Alternaria solani.</li>
+                    <li>The disease typically appears as small, dark spots on the lower leaves of the plant, which gradually enlarge and develop a concentric ring pattern.</li>
+                    <li>The leaves may eventually turn yellow and drop off, which can cause significant yield losses.</li>
+                    <li>To manage early blight, remove infected leaves, avoid overhead watering, and use disease-resistant tomato varieties.</li>
+                    <li>Fungicides can also be effective in managing early blight, but should be used as a preventative measure rather than a cure.</li>
+                    <li>Cultural practices such as crop rotation and planting in well-draining soil can also help prevent the disease from developing.</li>
+                    <li>It is best to contact a local agricultural extension office for guidance on the most appropriate treatment methods for early blight in your area.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Late blight' %}
+                
+                <ul class = "precautions">
+                    <li>Late blight is a destructive fungal disease of tomato plants caused by the oomycete Phytophthora infestans.</li>
+                    <li>The disease typically appears on leaves, stems, and fruit as dark, water-soaked lesions that can quickly expand and destroy the entire plant.</li>
+                    <li>It can spread rapidly, especially in cool, wet weather, and can cause significant yield losses.</li>
+                    <li>To manage late blight, use disease-resistant tomato varieties, rotate crops, and avoid overhead watering.</li>
+                    <li>Fungicides can also be effective in managing late blight, but should be used as a preventative measure rather than a cure.</li>
+                    <li>Sanitation is also important in preventing the spread of late blight, so be sure to clean and disinfect any tools or equipment used on infected plants.</li>
+                    <li>It is best to contact a local agricultural extension office for guidance on the most appropriate treatment methods for late blight in your area.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Leaf Mold' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato leaf mold is a fungal disease that affects tomato plants, caused by the fungus Passalora fulva (previously known as Cladosporium fulvum).</li>
+                    <li>Symptoms of tomato leaf mold include yellowing leaves, grayish-white mold on the undersides of leaves, and leaf drop.</li>
+                    <li>Tomato leaf mold thrives in humid conditions, so it is important to space plants properly to allow for good air circulation.</li>
+                    <li>To manage tomato leaf mold, remove affected leaves and provide good drainage in the soil.</li>
+                    <li>Fungicides can be effective in managing tomato leaf mold, but it is important to rotate products to prevent resistance.</li>
+                    <li>Preventative measures include avoiding overhead watering, and using disease-resistant tomato varieties.</li>
+                    <li>Proper plant spacing, pruning and trellising, and crop rotation can also help prevent tomato leaf mold.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Septoria leaf spot' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato Septoria leaf spot is a fungal disease that affects tomato plants, caused by the fungus Septoria lycopersici.</li>
+                    <li>Symptoms of tomato Septoria leaf spot include small, circular spots on the lower leaves that gradually enlarge and turn gray with a dark margin.</li>
+                    <li>As the disease progresses, the spots can merge, causing leaf yellowing, browning, and drop.</li>
+                    <li>To manage tomato Septoria leaf spot, remove affected leaves and provide good air circulation.</li>
+                    <li>Fungicides can be effective in managing tomato Septoria leaf spot, but it is important to rotate products to prevent resistance.</li>
+                    <li>Preventative measures include avoiding overhead watering, and using disease-resistant tomato varieties.</li>
+                    <li>Proper plant spacing, pruning and trellising, and crop rotation can also help prevent tomato Septoria leaf spot.</li>
+                <ul>
+            {% endif %}
+            
+            {% if disease_name == 'Tomato Spider mites (Two-spotted spider mite)' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato spider mites are tiny, sap-sucking pests that can infest tomato plants.</li>
+                    <li>Symptoms of spider mite damage include yellowed leaves with stippling or speckling, fine webbing on the leaves, and leaf drop.</li>
+                    <li>To manage tomato spider mites, spray plants with water to dislodge them, and use insecticidal soap or neem oil.</li>
+                    <li>Encouraging natural predators such as ladybugs and lacewings can also be effective in controlling spider mites.</li>
+                    <li>Preventative measures include regularly checking plants for spider mite infestations and avoiding over-fertilizing plants, as this can make them more susceptible to infestation.</li>
+                    <li>Proper plant spacing, pruning and trellising, and crop rotation can also help prevent spider mite infestations.</li>
+                    <li>Placing reflective mulch around plants may also help deter spider mites.</li>
+                <ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Target Spot' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato target spot is a fungal disease that affects tomato plants, caused by the fungus Corynespora cassiicola.</li>
+                    <li>Symptoms of tomato target spot include circular, brown spots with yellow halos on the leaves, which may coalesce to form larger spots.</li>
+                    <li>The disease can also cause defoliation, reduced plant growth, and decreased yield.</li>
+                    <li>To manage tomato target spot, plant resistant tomato varieties and avoid overhead irrigation.</li>
+                    <li>Use of fungicides can also be effective in managing the disease, particularly when used preventatively or when environmental conditions favor disease development.</li>
+                    <li>Sanitation practices, such as removing infected plant material and avoiding planting tomatoes in the same location year after year, can also help prevent the spread of the disease.</li>
+                    <li>It is important to maintain good overall plant health and monitor plants regularly for symptoms of disease.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato Yellow Leaf Curl Virus' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato yellow leaf curl virus is a viral disease that affects tomato plants, transmitted by the silverleaf whitefly (Bemisia tabaci).</li>
+                    <li>Symptoms of tomato yellow leaf curl virus include yellowing and upward curling of leaves, stunted growth, and reduced yield.</li>
+                    <li>There is no cure for the disease once a plant is infected, so prevention is key.</li>
+                    <li>To prevent the disease, use yellow sticky traps to monitor for whiteflies and use reflective mulch to deter them from landing on plants.</li>
+                    <li>Plant resistant tomato varieties and remove infected plants as soon as possible to prevent further spread of the disease.</li>
+                    <li>Use of insecticides can also be effective in controlling the silverleaf whitefly population, but should be used judiciously and in accordance with label instructions.</li>
+                    <li>It is important to maintain good overall plant health and monitor plants regularly for symptoms of disease.</li>
+                </ul>
+            {% endif %}
+
+            {% if disease_name == 'Tomato mosaic virus' %}
+                
+                <ul class = "precautions">
+                    <li>Tomato mosaic virus is a viral disease that affects tomato plants and is spread through contact with infected plant material or tools.</li>
+                    <li>Symptoms of tomato mosaic virus include mosaic or mottling of the leaves, stunted growth, and reduced yield.</li>
+                    <li>There is no cure for the disease once a plant is infected, so prevention is key.</li>
+                    <li>To prevent the disease, use only virus-free seed or seedlings, sanitize tools and equipment before use, and remove and destroy infected plant material as soon as possible.</li>
+                    <li>Plant resistant tomato varieties and avoid planting tomatoes in the same location year after year to help prevent the spread of the disease.</li>
+                    <li>It is important to maintain good overall plant health and monitor plants regularly for symptoms of disease.</li>
+                    <li>Using insecticides or fungicides will not be effective in controlling tomato mosaic virus, as it is a viral disease and not spread by insects or fungi.</li>
+                </ul>
+            {% endif %}
+
+
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+
+{% endblock %}
